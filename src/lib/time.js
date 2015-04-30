@@ -26,9 +26,9 @@ function time(year, month, day){
 
     var days = calculateDays(year, month);
     
-    if(day == 0){
+    if(day == 0 || day < 0){
         days = calculateDays(year, month-1);
-        day = days;
+        day = days + day;
         return time(year, month-1, day);
     }
 

@@ -6,6 +6,7 @@ var koa = require('koa');
 var app = module.exports = koa();
 var mount  = require("koa-mount");
 var ksort = require('ksort');
+var staticserver = require("koa-static");
 
 var Router = require('koa-router'),
     k = require("kmodel");
@@ -108,23 +109,9 @@ route.post("/", function *(next){
 
 });
 
+app.use(staticserver(__dirname+'/lib/'));
 app.use(mount("/", route.middleware()));
 app.listen(5888);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -153,8 +140,3 @@ function randomArray(array){
 
     return result.slice(-10);
 }
-
-
-
-
-

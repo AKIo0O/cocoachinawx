@@ -108,7 +108,11 @@ var Sync = {
     				+ Sync.access_token + ' -d \'{"media_id":"'+ mediaid
     				+ '"}\' > '+__dirname+'/images/'+ mediaid+".jpg";
 
-        child = exec(command, function(error, stdout, stderr){});
+        return function(done){
+        	exec(command, function(error, stdout, stderr){
+        		done(null, {});
+        	});
+        };
 	},
 
 

@@ -85,7 +85,7 @@ route.post("/", function *(next){
                 rst = yield Rank.find({ref_date: ranges[i]});
                 datas = datas.concat(rst);
             }
-
+            
             datas = sort(datas).slice(-20);
 
             for(var i =datas.length-1; i > 0 ; i--){
@@ -99,7 +99,7 @@ route.post("/", function *(next){
 
     }
 
-    basemessage.count = 10;
+    basemessage.count = basemessage.articles.length;
     basemessage.articles = basemessage.articles.map(function(item){
         item.PicUrl = "http://images.uuzcloud.com/"+ item.PicUrl; 
         return item; 

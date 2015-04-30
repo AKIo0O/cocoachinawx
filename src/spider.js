@@ -88,7 +88,7 @@ var SpiderNews = function*(){
 
         yield News.insertOne(instance);
 
-        Sync.saveFile(item.thumb_media_id);
+        yield Sync.saveFile(item.thumb_media_id);
     }
 
     console.log("---图文抓取完毕---");

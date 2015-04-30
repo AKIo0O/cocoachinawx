@@ -25,10 +25,16 @@ function start(){
 function time(year, month, day){
 
     var days = calculateDays(year, month);
+    
+    if(day == 0){
+        days = calculateDays(year, month-1);
+        day = days;
+        return time(year, month-1, day - days);
+    }
 
     if(days < day) return time(year, month+1, day - days);
 
-    return ""+year+"-"+("0"+month).slice(-2)+"-"+("0"+day).slice(-2);
+    return year+"-"+("0"+month).slice(-2)+"-"+("00"+day).slice(-2);
 }
 
 module.exports = start;

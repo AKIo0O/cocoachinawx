@@ -1,0 +1,44 @@
+    
+{
+    "name": "CocoachinaWX",
+    "version": "1.0.0",
+        "author": {
+        "name": "AKI",
+        "email": "tangxm90@gmail.com"
+    },
+    "dependencies": {
+        "co": "*",
+        "handlebars": "*",
+        "kmodel": "*",
+        "koa": "*",
+        "koa-mount": "*",
+        "koa-router": "*",
+        "koa-static": "*",
+        "ksort": "*",
+        "raw-body": "*",
+        "thunkify": "*",
+        "wechat-crypto": "*",
+        "xml2js": "*",
+    },
+    
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:AKIo0O/cocoachinawx.git"
+    },
+    "engines": {
+        "node": ">=0.12"
+    },
+    "readmeFilename": "README.md",
+    "bugs": {
+        "url": "https://github.com/AKIo0O/cocoachinawx/issues"
+    },
+    "homepage": "https://github.com/AKIo0O/cocoachinawx",
+    "maintainers": [
+        {
+          "name": "imappbox",
+          "email": "losabare@gmail.com"
+        }
+    ],
+    "directories": {},
+    "scripts": {}
+}

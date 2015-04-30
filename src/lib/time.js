@@ -29,7 +29,7 @@ function time(year, month, day){
     if(day == 0){
         days = calculateDays(year, month-1);
         day = days;
-        return time(year, month-1, day - days);
+        return time(year, month-1, day);
     }
 
     if(days < day) return time(year, month+1, day - days);

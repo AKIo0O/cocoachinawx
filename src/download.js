@@ -22,9 +22,9 @@ var Download = function*(){
 
         item = list.shift();
 
-        yield Sync.saveFile(item.thumb_media_id);
+        yield Sync.saveFile(item.PicUrl.slice(0,-4));
 
-        console.log(item.thumb_media_id + ".jpg is downloaded");
+        console.log(item.PicUrl + ".jpg is downloaded");
     }
 
     console.log("---图文下载完毕---");

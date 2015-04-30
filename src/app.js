@@ -102,6 +102,7 @@ route.post("/", function *(next){
     basemessage.count = basemessage.articles.length;
     basemessage.articles = basemessage.articles.map(function(item){
         item.PicUrl = "http://images.uuzcloud.com/"+ item.PicUrl; 
+        item.Description = "";
         return item; 
     });
 

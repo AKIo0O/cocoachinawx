@@ -124,7 +124,7 @@ function sort(array){
 function randomArray(array){
 
     var randomarrays = [], i = array.length < 20? array.length : 20, result = [];
-
+    var rnumber;
 
     function random(){
 

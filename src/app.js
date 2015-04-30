@@ -35,7 +35,7 @@ var alldata = [], time = Date.now(), allnews = [];
 route.post("/", function *(next){
 
     var verify = wx.signatrue(this.query, this.host), message = {}, result,
-        body, xmlstr, me = this, data, process = require('./plugin/helper'), pluginpath, basemessage ;
+        body, xmlstr, me = this, data,  basemessage ;
 
     if(verify == false) return this.throw(403, 'error token');;
 
